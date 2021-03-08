@@ -1,7 +1,0 @@
-E:\Csharpwork\figureAllPrime\bin\Debug\figureAllPrime.exe.config
-E:\Csharpwork\figureAllPrime\bin\Debug\figureAllPrime.exe
-E:\Csharpwork\figureAllPrime\bin\Debug\figureAllPrime.pdb
-E:\Csharpwork\figureAllPrime\obj\Debug\figureAllPrime.csprojAssemblyReference.cache
-E:\Csharpwork\figureAllPrime\obj\Debug\figureAllPrime.csproj.CoreCompileInputs.cache
-E:\Csharpwork\figureAllPrime\obj\Debug\figureAllPrime.exe
-E:\Csharpwork\figureAllPrime\obj\Debug\figureAllPrime.pdb

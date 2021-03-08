@@ -1,0 +1,7 @@
+E:\Csharpwork\Toeplitz\bin\Debug\Toeplitz.exe.config
+E:\Csharpwork\Toeplitz\bin\Debug\Toeplitz.exe
+E:\Csharpwork\Toeplitz\bin\Debug\Toeplitz.pdb
+E:\Csharpwork\Toeplitz\obj\Debug\Toeplitz.csproj.CoreCompileInputs.cache
+E:\Csharpwork\Toeplitz\obj\Debug\Toeplitz.exe
+E:\Csharpwork\Toeplitz\obj\Debug\Toeplitz.pdb
+E:\Csharpwork\Toeplitz\obj\Debug\Toeplitz.csprojAssemblyReference.cache

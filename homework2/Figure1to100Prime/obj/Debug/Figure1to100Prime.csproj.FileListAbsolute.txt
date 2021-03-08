@@ -1,0 +1,7 @@
+E:\Csharpwork\Figure1to100Prime\bin\Debug\Figure1to100Prime.exe.config
+E:\Csharpwork\Figure1to100Prime\bin\Debug\Figure1to100Prime.exe
+E:\Csharpwork\Figure1to100Prime\bin\Debug\Figure1to100Prime.pdb
+E:\Csharpwork\Figure1to100Prime\obj\Debug\Figure1to100Prime.csproj.CoreCompileInputs.cache
+E:\Csharpwork\Figure1to100Prime\obj\Debug\Figure1to100Prime.exe
+E:\Csharpwork\Figure1to100Prime\obj\Debug\Figure1to100Prime.pdb
+E:\Csharpwork\Figure1to100Prime\obj\Debug\Figure1to100Prime.csprojAssemblyReference.cache

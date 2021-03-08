@@ -1,0 +1,14 @@
+E:\Csharpwork\FigureArray\bin\Debug\FigureArray.exe.config
+E:\Csharpwork\FigureArray\bin\Debug\FigureArray.exe
+E:\Csharpwork\FigureArray\bin\Debug\FigureArray.pdb
+E:\Csharpwork\FigureArray\obj\Debug\FigureArray.csprojAssemblyReference.cache
+E:\Csharpwork\FigureArray\obj\Debug\FigureArray.csproj.CoreCompileInputs.cache
+E:\Csharpwork\FigureArray\obj\Debug\FigureArray.exe
+E:\Csharpwork\FigureArray\obj\Debug\FigureArray.pdb
+C:\Users\画意\Desktop\homework2\FigureArray\bin\Debug\FigureArray.exe.config
+C:\Users\画意\Desktop\homework2\FigureArray\bin\Debug\FigureArray.exe
+C:\Users\画意\Desktop\homework2\FigureArray\bin\Debug\FigureArray.pdb
+C:\Users\画意\Desktop\homework2\FigureArray\obj\Debug\FigureArray.csprojAssemblyReference.cache
+C:\Users\画意\Desktop\homework2\FigureArray\obj\Debug\FigureArray.csproj.CoreCompileInputs.cache
+C:\Users\画意\Desktop\homework2\FigureArray\obj\Debug\FigureArray.exe
+C:\Users\画意\Desktop\homework2\FigureArray\obj\Debug\FigureArray.pdb

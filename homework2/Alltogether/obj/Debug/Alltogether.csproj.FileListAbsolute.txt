@@ -1,0 +1,7 @@
+C:\Users\画意\Desktop\homework2\Alltogether\bin\Debug\Alltogether.exe.config
+C:\Users\画意\Desktop\homework2\Alltogether\bin\Debug\Alltogether.exe
+C:\Users\画意\Desktop\homework2\Alltogether\bin\Debug\Alltogether.pdb
+C:\Users\画意\Desktop\homework2\Alltogether\obj\Debug\Alltogether.csprojAssemblyReference.cache
+C:\Users\画意\Desktop\homework2\Alltogether\obj\Debug\Alltogether.csproj.CoreCompileInputs.cache
+C:\Users\画意\Desktop\homework2\Alltogether\obj\Debug\Alltogether.exe
+C:\Users\画意\Desktop\homework2\Alltogether\obj\Debug\Alltogether.pdb

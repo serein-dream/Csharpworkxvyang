@@ -1,0 +1,7 @@
+E:\Csharpwork\true\homework3\work1\bin\Debug\work1.exe.config
+E:\Csharpwork\true\homework3\work1\bin\Debug\work1.exe
+E:\Csharpwork\true\homework3\work1\bin\Debug\work1.pdb
+E:\Csharpwork\true\homework3\work1\obj\Debug\work1.csprojAssemblyReference.cache
+E:\Csharpwork\true\homework3\work1\obj\Debug\work1.csproj.CoreCompileInputs.cache
+E:\Csharpwork\true\homework3\work1\obj\Debug\work1.exe
+E:\Csharpwork\true\homework3\work1\obj\Debug\work1.pdb

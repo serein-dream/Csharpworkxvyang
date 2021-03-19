@@ -1,0 +1,6 @@
+E:\Csharpwork\true\work1\homework4\bin\Debug\homework4.exe.config
+E:\Csharpwork\true\work1\homework4\bin\Debug\homework4.exe
+E:\Csharpwork\true\work1\homework4\bin\Debug\homework4.pdb
+E:\Csharpwork\true\work1\homework4\obj\Debug\homework4_1.csproj.CoreCompileInputs.cache
+E:\Csharpwork\true\work1\homework4\obj\Debug\homework4.exe
+E:\Csharpwork\true\work1\homework4\obj\Debug\homework4.pdb

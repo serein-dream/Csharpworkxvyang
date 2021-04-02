@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<ArrayOfOrder xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Order>
+    <Sp>
+      <OrderDetails>
+        <Spname>查拉图斯特拉如是说</Spname>
+        <Spmoney>44</Spmoney>
+        <Spnumber>1</Spnumber>
+      </OrderDetails>
+      <OrderDetails>
+        <Spname>飞鸟集</Spname>
+        <Spmoney>20</Spmoney>
+        <Spnumber>2</Spnumber>
+      </OrderDetails>
+    </Sp>
+    <Number>3</Number>
+    <Id>112</Id>
+    <Customer>马旭阳</Customer>
+    <Totalmoney>84</Totalmoney>
+    <Spinformation>commodity:  查拉图斯特拉如是说  ,itsmoney is :  44  ,itsnumber is :  1
+commodity:  飞鸟集  ,itsmoney is :  20  ,itsnumber is :  2
+</Spinformation>
+  </Order>
+  <Order>
+    <Sp>
+      <OrderDetails>
+        <Spname>波西杰克逊</Spname>
+        <Spmoney>74</Spmoney>
+        <Spnumber>5</Spnumber>
+      </OrderDetails>
+      <OrderDetails>
+        <Spname>累死了啊啊啊啊</Spname>
+        <Spmoney>10</Spmoney>
+        <Spnumber>11</Spnumber>
+      </OrderDetails>
+    </Sp>
+    <Number>16</Number>
+    <Id>520</Id>
+    <Customer>李四</Customer>
+    <Totalmoney>480</Totalmoney>
+    <Spinformation>commodity:  波西杰克逊  ,itsmoney is :  74  ,itsnumber is :  5
+commodity:  累死了啊啊啊啊  ,itsmoney is :  10  ,itsnumber is :  11
+</Spinformation>
+  </Order>
+  <Order>
+    <Sp>
+      <OrderDetails>
+        <Spname>哈利波特</Spname>
+        <Spmoney>84</Spmoney>
+        <Spnumber>1</Spnumber>
+      </OrderDetails>
+      <OrderDetails>
+        <Spname>不知所云</Spname>
+        <Spmoney>30</Spmoney>
+        <Spnumber>4</Spnumber>
+      </OrderDetails>
+    </Sp>
+    <Number>5</Number>
+    <Id>3112</Id>
+    <Customer>张三</Customer>
+    <Totalmoney>204</Totalmoney>
+    <Spinformation>commodity:  哈利波特  ,itsmoney is :  84  ,itsnumber is :  1
+commodity:  不知所云  ,itsmoney is :  30  ,itsnumber is :  4
+</Spinformation>
+  </Order>
+</ArrayOfOrder>

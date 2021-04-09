@@ -1,21 +1,28 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 //马旭阳
 //2019302110112
-namespace homework5
+namespace homework6
 {
-    public class OrderDetails:Object
+    public class OrderDetails : Object
     {
         public string Spname { get; set; }
         public int Spmoney { get; set; }
         public int Spnumber { get; set; }
-        public OrderDetails(string spname, int spmoney, int spnumber) {
+        public OrderDetails(string spname, int spmoney, int spnumber)
+        {
             this.Spmoney = spmoney;
             this.Spname = spname;
             this.Spnumber = spnumber;
+        }
+        public OrderDetails()
+        {
+
         }
         public override bool Equals(object obj)
         {
@@ -24,7 +31,7 @@ namespace homework5
         }
         public override string ToString()
         {
-            return "commodity:  "+Spname+"  ,itsmoney is :  "+Convert.ToString(Spmoney)+"  ,itsnumber is :  "+Convert.ToString(Spnumber)+"\n";
+            return "commodity:  " + Spname + "  ,itsmoney is :  " + Convert.ToString(Spmoney) + "  ,itsnumber is :  " + Convert.ToString(Spnumber) + "\n";
         }
         public override int GetHashCode()
         {
@@ -43,8 +50,11 @@ namespace homework5
         public string Customer { get; set; }
         public int Totalmoney { get; set; }
         public string Spinformation { get; set; }
-      
-        public Order(string customer,int id, params OrderDetails[] p)
+        public Order()
+        {
+
+        }
+        public Order(string customer, int id, params OrderDetails[] p)
         {
             this.Customer = customer;
             this.Id = id;
@@ -63,7 +73,7 @@ namespace homework5
         }
         public override string ToString()
         {
-            string s = "this order's id is:  " + Convert.ToString(Id) + " ,and its customer is :  " + Customer + " ,Totalnumber is :  " + Convert.ToString(Number) + " , and its Totalmoney is :  " + Convert.ToString(Totalmoney)+"\n";
+            string s = "this order's id is:  " + Convert.ToString(Id) + " ,and its customer is :  " + Customer + " ,Totalnumber is :  " + Convert.ToString(Number) + " , and its Totalmoney is :  " + Convert.ToString(Totalmoney) + "\n";
             s += Spinformation;
             return s;
         }
@@ -79,6 +89,11 @@ namespace homework5
     public class OrderService
     {
         public static List<Order> Myorder = new List<Order>();
+
+        public OrderService()
+        {
+
+        }
 
         //增
         public static bool AddOrder(Order order)
@@ -101,39 +116,39 @@ namespace homework5
             {
                 throw new InvalidOperationException("要删除的订单不存在！");
             }
-            Myorder.Remove(query);
+            Myorder.RemoveAll(m => m.Id == orderId);
         }
 
         //查
-        public static IEnumerable<Order> QueryById(int checkId) {
-            var query = from m in Myorder
-                        where m.Id == checkId
-                        select m;
-            return query;
-            }
-        public static IEnumerable<Order> QueryByName(string checkName)
+        public static Order QueryById(int checkId)
+        {
+            return  Myorder.Where(m => m.Id == checkId).FirstOrDefault();
+            
+        }
+        public static List<Order> QueryByName(string checkName)
         {
             var query = from m in Myorder
                         where m.Sp.Where(n => n.Spname == checkName).Any()
                         select m;
-            return query;
+            return query.ToList();
         }
-        public static IEnumerable<Order> QueryByCustomer(string checkcustomer)
+        public static List<Order> QueryByCustomer(string checkcustomer)
         {
             var query = from m in Myorder
                         where m.Customer == checkcustomer
                         select m;
-            return query;
+            return query.ToList();
         }
 
-        public static IEnumerable<Order> QueryAll()
+        public static List<Order> QueryAll()
         {
-            return from m in Myorder
+            var query = from m in Myorder 
                    orderby m.Id
                    select m;
+            return query.ToList();
         }
 
-        public static IEnumerable<Order> QueryByAmount(int x, int y)
+        public static List<Order> QueryByAmount(int x, int y)
         {
             int minnum, maxnum;
             if (x < y)
@@ -147,9 +162,9 @@ namespace homework5
                 maxnum = x;
             }
             var query = from m in Myorder
-                        where m.Number>=minnum &&m.Number<=maxnum
+                        where m.Number >= minnum && m.Number <= maxnum
                         select m;
-            return query;
+            return query.ToList();
         }
 
         //改
@@ -160,7 +175,7 @@ namespace homework5
                 throw new ArgumentException("参数不能为空！");
             }
             var thisorder = Myorder.Where(m => m.Id == order.Id).FirstOrDefault();
-            if(thisorder==null)
+            if (thisorder == null)
             {
                 throw new InvalidOperationException("要编辑的订单不存在！");
             }
@@ -181,7 +196,31 @@ namespace homework5
                 thisorder.Number = order.Number;
             }
         }
+        
+        //以下为新增代码
+        //序列化为XML文件
+        public static string Export(List<Order> Seorders,string filename)
+        {
+            XmlSerializer xmlSerializer = new XmlSerializer(typeof(List<Order>));
+            using (FileStream fs = new FileStream(filename, FileMode.Create))
+            {
+                xmlSerializer.Serialize(fs, Seorders);
+                return filename;
+            }
+        }
 
+        //将xml文件里的订单载入
+        public static void Import(string beloadname)
+        {
+            XmlSerializer xmlSerializer = new XmlSerializer(typeof(List<Order>));
+            using (FileStream beload = new FileStream(beloadname, FileMode.Open))
+            {
+                List<Order> toload = (List<Order>)xmlSerializer.Deserialize(beload);
+                List<Order> sum = toload.Union(Myorder).ToList<Order>();
+                Myorder = sum;
+            }
+        }
+            
     }
     class Program
     {
@@ -193,55 +232,81 @@ namespace homework5
             OrderService.AddOrder(new Order("李四", 0520, new OrderDetails("波西杰克逊", 74, 5), new OrderDetails("累死了啊啊啊啊", 10, 11)));
             Console.WriteLine("查询所有订单，按订单的商品数量排序： ");
             var que_1 = OrderService.QueryAll();
-            foreach (var theorder in que_1) {
+            foreach (var theorder in que_1)
+            {
                 Console.WriteLine(theorder.ToString());
             }
 
 
-            Console.WriteLine("按顾客查询： ");
-            var que_2 = OrderService.QueryByCustomer("马旭阳");
+            //以下为新增代码
+            Console.WriteLine("将以上订单转为xml文件：");
+            Console.WriteLine(File.ReadAllText(OrderService.Export(OrderService.Myorder,"s.xml")));
+
+            Order Tobeload = new Order("王五", 6112, new OrderDetails("挑战程序设计竞赛", 54, 1), new OrderDetails("计算机组成与设计", 130, 2));
+            List<Order> Neworder = new List<Order>();
+            Neworder.Add(Tobeload);
+            Console.WriteLine("新产生订单:");
+            Console.WriteLine(File.ReadAllText(OrderService.Export(Neworder, "n.xml")));
+            OrderService.Import(OrderService.Export(Neworder, "n.xml"));
+
+            Console.WriteLine("加入新产生的订单后，所有订单如下： ");
+            var que_2 = OrderService.QueryAll();
             foreach (var theorder in que_2)
             {
                 Console.WriteLine(theorder.ToString());
             }
 
-
-            Console.WriteLine("按订单号查询： ");
-            var que_3 = OrderService.QueryByCustomer("0520");
-            foreach (var theorder in que_3)
+            
+            Console.WriteLine("按顾客查询(马旭阳)： ");
+            var que_8 = OrderService.QueryByCustomer("马旭阳");
+            foreach (var theorder in que_8)
             {
                 Console.WriteLine(theorder.ToString());
             }
 
 
-            Console.WriteLine("按商品名查询： ");
+            Console.WriteLine("按订单号查询（3112）： ");
+            var que_3 = OrderService.QueryById(3112);
+            Console.WriteLine(que_3.ToString());
+            
 
-            var que_4 = OrderService.QueryByCustomer("哈利波特");
+
+            Console.WriteLine("按商品名查询（计算机组成与设计）： ");
+
+            var que_4 = OrderService.QueryByName("计算机组成与设计");
             foreach (var theorder in que_4)
             {
                 Console.WriteLine(theorder.ToString());
             }
 
-           
 
-            Console.WriteLine("修改订单： ");
+
+            Console.WriteLine("修改订单（将3112的顾客从马旭阳改成画意）： ");
             OrderService.EditOrder(new Order("画意", 3112));
             var que_5 = OrderService.QueryById(3112);
-            foreach (var theorder in que_5)
-            {
-                Console.WriteLine(theorder.ToString());
-            }
+            Console.WriteLine(que_5.ToString());
             
 
-            Console.WriteLine("删除订单： ");
-            OrderService.Deleteorder(0520);           
-            var que_6 = OrderService.QueryById(0520);
-            foreach (var theorder in que_6)
+
+            Console.WriteLine("删除订单前： ");
+            var que_9 = OrderService.QueryAll();
+            foreach (var theorder in que_9)
             {
                 Console.WriteLine(theorder.ToString());
             }
+
+            Console.WriteLine("删除订单0520后： ");
+            OrderService.Deleteorder(0520);
+            var que_10 = OrderService.QueryAll();
+            foreach (var theorder in que_10)
+            {
+                Console.WriteLine(theorder.ToString());
+            }
+
+
             Console.WriteLine("输入任意符号结束： ");
             string g = Console.ReadLine();
         }
     }
 }
+

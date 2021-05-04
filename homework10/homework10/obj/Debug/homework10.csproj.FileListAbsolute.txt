@@ -1,0 +1,9 @@
+E:\Csharpwork\true\homework10\homework10\bin\Debug\homework10.exe.config
+E:\Csharpwork\true\homework10\homework10\bin\Debug\homework10.exe
+E:\Csharpwork\true\homework10\homework10\bin\Debug\homework10.pdb
+E:\Csharpwork\true\homework10\homework10\obj\Debug\homework10.csprojAssemblyReference.cache
+E:\Csharpwork\true\homework10\homework10\obj\Debug\homework10.Properties.Resources.resources
+E:\Csharpwork\true\homework10\homework10\obj\Debug\homework10.csproj.GenerateResource.cache
+E:\Csharpwork\true\homework10\homework10\obj\Debug\homework10.csproj.CoreCompileInputs.cache
+E:\Csharpwork\true\homework10\homework10\obj\Debug\homework10.exe
+E:\Csharpwork\true\homework10\homework10\obj\Debug\homework10.pdb

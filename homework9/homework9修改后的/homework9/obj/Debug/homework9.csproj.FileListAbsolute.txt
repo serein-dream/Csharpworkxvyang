@@ -1,0 +1,10 @@
+E:\Csharpwork\true\homework9\homework9\bin\Debug\homework9.exe.config
+E:\Csharpwork\true\homework9\homework9\bin\Debug\homework9.exe
+E:\Csharpwork\true\homework9\homework9\bin\Debug\homework9.pdb
+E:\Csharpwork\true\homework9\homework9\obj\Debug\homework9.csprojAssemblyReference.cache
+E:\Csharpwork\true\homework9\homework9\obj\Debug\homework9.Form1.resources
+E:\Csharpwork\true\homework9\homework9\obj\Debug\homework9.Properties.Resources.resources
+E:\Csharpwork\true\homework9\homework9\obj\Debug\homework9.csproj.GenerateResource.cache
+E:\Csharpwork\true\homework9\homework9\obj\Debug\homework9.csproj.CoreCompileInputs.cache
+E:\Csharpwork\true\homework9\homework9\obj\Debug\homework9.exe
+E:\Csharpwork\true\homework9\homework9\obj\Debug\homework9.pdb
